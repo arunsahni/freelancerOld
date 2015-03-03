@@ -25,18 +25,9 @@ var User = mongoose.model('User',userSchema);
 
 function createDefaultUsers() {
     User.find({}).exec(function (err, collection) {
-        if (collection.length == 0) {
-            var salt, hash;
-            salt = encrypt.createSalt();
-            hash = encrypt.hashedPwd(salt, 'sahni');
-            User.create({firstName: 'arun', lastName: 'sahni', username: 'sahni', salt: salt, hashed_pwd: hash, roles: ['admin']});
 
-            salt = encrypt.createSalt();
-            hash = encrypt.hashedPwd(salt, 'pinkhand');
-            User.create({firstName: 'pink', lastName: 'hand', username: 'pinkhand', salt: salt, hashed_pwd: hash, roles: []});
-        } else {
-            console.log("collection", collection);
-        }
+            //console.log("collection", collection);
+
     })
 }
 
