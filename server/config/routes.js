@@ -24,6 +24,6 @@ module.exports = function(app){
     });
 
     app.get('*',function(req,res){
-        res.render('./view/index.html');
+        res.sendfile('server/views/index.html');
     });
 }

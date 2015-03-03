@@ -23,7 +23,7 @@ module.exports = function(app, config){
 
     app.use(express.static(config.rootPath + '/client'));
 
-    app.set('views',config.rootPath + '/server/views');
+    app.set('views',config.rootPath + 'server/views');
     //app.set('view engine', 'html');
     app.set('view engine', require('html'));
     //app.set('views', './server/views');

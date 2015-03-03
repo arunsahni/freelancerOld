@@ -10,4 +10,3 @@ require('./server/config/routes')(app);
 
 app.listen(config.port);
 console.log("Server on :", config.port);
-
